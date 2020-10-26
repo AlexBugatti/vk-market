@@ -1,0 +1,6 @@
+framework module Pods_vk_market {
+  umbrella header "Pods-vk-market-umbrella.h"
+
+  export *
+  module * { export * }
+}
