@@ -12,6 +12,24 @@
 		FA8EF9E325473EDF002DD282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8EF9E125473EDF002DD282 /* Main.storyboard */; };
 		FA8EF9E525473EE7002DD282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8EF9E425473EE7002DD282 /* Assets.xcassets */; };
 		FA8EF9E825473EE7002DD282 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8EF9E625473EE7002DD282 /* LaunchScreen.storyboard */; };
+		FA8EF9F425474467002DD282 /* VKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EF9F325474467002DD282 /* VKManager.swift */; };
+		FA8EF9F6254744A1002DD282 /* VKMarketModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EF9F5254744A1002DD282 /* VKMarketModule.swift */; };
+		FA8EF9FA254747BE002DD282 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EF9F9254747BE002DD282 /* AuthController.swift */; };
+		FA8EF9FD254747E9002DD282 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EF9FC254747E9002DD282 /* MainController.swift */; };
+		FA8EFA0725475C9A002DD282 /* TT Commons DemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA8EFA0025475C9A002DD282 /* TT Commons DemiBold.otf */; };
+		FA8EFA0825475C9A002DD282 /* TTCommons-DemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8EFA0125475C9A002DD282 /* TTCommons-DemiBold.ttf */; };
+		FA8EFA0925475C9A002DD282 /* SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8EFA0325475C9A002DD282 /* SFProDisplay-Medium.ttf */; };
+		FA8EFA0A25475C9A002DD282 /* SFProDisplay-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8EFA0425475C9A002DD282 /* SFProDisplay-Light.ttf */; };
+		FA8EFA0B25475C9A002DD282 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8EFA0525475C9A002DD282 /* SFProDisplay-Regular.ttf */; };
+		FA8EFA0C25475C9A002DD282 /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA8EFA0625475C9A002DD282 /* SFProDisplay-Semibold.ttf */; };
+		FA8EFA0E25475DEA002DD282 /* Extension+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EFA0D25475DEA002DD282 /* Extension+NavigationBar.swift */; };
+		FA8EFA1125475E8C002DD282 /* CatalogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EFA1025475E8C002DD282 /* CatalogController.swift */; };
+		FA8EFA1425475FC2002DD282 /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EFA1325475FC2002DD282 /* Pallete.swift */; };
+		FA8EFA1625476024002DD282 /* Extension+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EFA1525476023002DD282 /* Extension+Font.swift */; };
+		FA8EFA1C254768FD002DD282 /* ProductCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EFA1A254768FD002DD282 /* ProductCollectionCell.swift */; };
+		FA8EFA1D254768FD002DD282 /* ProductCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8EFA1B254768FD002DD282 /* ProductCollectionCell.xib */; };
+		FA8EFA2025476BF8002DD282 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EFA1F25476BF8002DD282 /* Product.swift */; };
+		FA8EFA2225476F56002DD282 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EFA2125476F56002DD282 /* ProductResponse.swift */; };
 		FB807FA0D409C2598376AFFF /* Pods_vk_market.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8EEAD080CBAEED689703AAA /* Pods_vk_market.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +44,24 @@
 		FA8EF9E425473EE7002DD282 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA8EF9E725473EE7002DD282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA8EF9E925473EE7002DD282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA8EF9F325474467002DD282 /* VKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKManager.swift; sourceTree = "<group>"; };
+		FA8EF9F5254744A1002DD282 /* VKMarketModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKMarketModule.swift; sourceTree = "<group>"; };
+		FA8EF9F9254747BE002DD282 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		FA8EF9FC254747E9002DD282 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		FA8EFA0025475C9A002DD282 /* TT Commons DemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Commons DemiBold.otf"; sourceTree = "<group>"; };
+		FA8EFA0125475C9A002DD282 /* TTCommons-DemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TTCommons-DemiBold.ttf"; sourceTree = "<group>"; };
+		FA8EFA0325475C9A002DD282 /* SFProDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Medium.ttf"; sourceTree = "<group>"; };
+		FA8EFA0425475C9A002DD282 /* SFProDisplay-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Light.ttf"; sourceTree = "<group>"; };
+		FA8EFA0525475C9A002DD282 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		FA8EFA0625475C9A002DD282 /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
+		FA8EFA0D25475DEA002DD282 /* Extension+NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+NavigationBar.swift"; sourceTree = "<group>"; };
+		FA8EFA1025475E8C002DD282 /* CatalogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogController.swift; sourceTree = "<group>"; };
+		FA8EFA1325475FC2002DD282 /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
+		FA8EFA1525476023002DD282 /* Extension+Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Font.swift"; sourceTree = "<group>"; };
+		FA8EFA1A254768FD002DD282 /* ProductCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionCell.swift; sourceTree = "<group>"; };
+		FA8EFA1B254768FD002DD282 /* ProductCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionCell.xib; sourceTree = "<group>"; };
+		FA8EFA1F25476BF8002DD282 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		FA8EFA2125476F56002DD282 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +114,11 @@
 		FA8EF9DA25473EDF002DD282 /* vk-market */ = {
 			isa = PBXGroup;
 			children = (
+				FA8EF9EF254742BA002DD282 /* Extensions */,
+				FA8EF9F0254742C5002DD282 /* Classes */,
+				FA8EF9F12547431A002DD282 /* Resources */,
 				FA8EF9DB25473EDF002DD282 /* AppDelegate.swift */,
+				FA8EFA1225475FA8002DD282 /* Support */,
 				FA8EF9DF25473EDF002DD282 /* ViewController.swift */,
 				FA8EF9E125473EDF002DD282 /* Main.storyboard */,
 				FA8EF9E425473EE7002DD282 /* Assets.xcassets */,
@@ -86,6 +126,148 @@
 				FA8EF9E925473EE7002DD282 /* Info.plist */,
 			);
 			path = "vk-market";
+			sourceTree = "<group>";
+		};
+		FA8EF9EF254742BA002DD282 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EFA0D25475DEA002DD282 /* Extension+NavigationBar.swift */,
+				FA8EFA1525476023002DD282 /* Extension+Font.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA8EF9F0254742C5002DD282 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EFA1E25476B96002DD282 /* Models */,
+				FA8EFA17254768A9002DD282 /* Views */,
+				FA8EF9F72547478E002DD282 /* Controllers */,
+				FA8EF9F225474358002DD282 /* API */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FA8EF9F12547431A002DD282 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EF9FE25475C99002DD282 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA8EF9F225474358002DD282 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EF9F325474467002DD282 /* VKManager.swift */,
+				FA8EF9F5254744A1002DD282 /* VKMarketModule.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FA8EF9F72547478E002DD282 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EFA0F25475E73002DD282 /* Catalog */,
+				FA8EF9FB254747CD002DD282 /* Main */,
+				FA8EF9F82547479E002DD282 /* Auth */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA8EF9F82547479E002DD282 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EF9F9254747BE002DD282 /* AuthController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FA8EF9FB254747CD002DD282 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EF9FC254747E9002DD282 /* MainController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FA8EF9FE25475C99002DD282 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EF9FF25475C9A002DD282 /* TT Commons */,
+				FA8EFA0225475C9A002DD282 /* SFPro */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FA8EF9FF25475C9A002DD282 /* TT Commons */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EFA0025475C9A002DD282 /* TT Commons DemiBold.otf */,
+				FA8EFA0125475C9A002DD282 /* TTCommons-DemiBold.ttf */,
+			);
+			path = "TT Commons";
+			sourceTree = "<group>";
+		};
+		FA8EFA0225475C9A002DD282 /* SFPro */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EFA0325475C9A002DD282 /* SFProDisplay-Medium.ttf */,
+				FA8EFA0425475C9A002DD282 /* SFProDisplay-Light.ttf */,
+				FA8EFA0525475C9A002DD282 /* SFProDisplay-Regular.ttf */,
+				FA8EFA0625475C9A002DD282 /* SFProDisplay-Semibold.ttf */,
+			);
+			path = SFPro;
+			sourceTree = "<group>";
+		};
+		FA8EFA0F25475E73002DD282 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EFA1025475E8C002DD282 /* CatalogController.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		FA8EFA1225475FA8002DD282 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EFA1325475FC2002DD282 /* Pallete.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		FA8EFA17254768A9002DD282 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EFA18254768B6002DD282 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA8EFA18254768B6002DD282 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EFA19254768C1002DD282 /* ProductCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		FA8EFA19254768C1002DD282 /* ProductCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EFA1A254768FD002DD282 /* ProductCollectionCell.swift */,
+				FA8EFA1B254768FD002DD282 /* ProductCollectionCell.xib */,
+			);
+			path = ProductCell;
+			sourceTree = "<group>";
+		};
+		FA8EFA1E25476B96002DD282 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EFA1F25476BF8002DD282 /* Product.swift */,
+				FA8EFA2125476F56002DD282 /* ProductResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +331,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8EF9E825473EE7002DD282 /* LaunchScreen.storyboard in Resources */,
+				FA8EFA0C25475C9A002DD282 /* SFProDisplay-Semibold.ttf in Resources */,
 				FA8EF9E525473EE7002DD282 /* Assets.xcassets in Resources */,
+				FA8EFA1D254768FD002DD282 /* ProductCollectionCell.xib in Resources */,
+				FA8EFA0725475C9A002DD282 /* TT Commons DemiBold.otf in Resources */,
+				FA8EFA0B25475C9A002DD282 /* SFProDisplay-Regular.ttf in Resources */,
+				FA8EFA0A25475C9A002DD282 /* SFProDisplay-Light.ttf in Resources */,
+				FA8EFA0825475C9A002DD282 /* TTCommons-DemiBold.ttf in Resources */,
 				FA8EF9E325473EDF002DD282 /* Main.storyboard in Resources */,
+				FA8EFA0925475C9A002DD282 /* SFProDisplay-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,8 +392,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8EFA1625476024002DD282 /* Extension+Font.swift in Sources */,
+				FA8EFA1C254768FD002DD282 /* ProductCollectionCell.swift in Sources */,
+				FA8EF9F425474467002DD282 /* VKManager.swift in Sources */,
+				FA8EFA1125475E8C002DD282 /* CatalogController.swift in Sources */,
 				FA8EF9E025473EDF002DD282 /* ViewController.swift in Sources */,
+				FA8EFA2025476BF8002DD282 /* Product.swift in Sources */,
+				FA8EF9FA254747BE002DD282 /* AuthController.swift in Sources */,
+				FA8EFA1425475FC2002DD282 /* Pallete.swift in Sources */,
+				FA8EFA2225476F56002DD282 /* ProductResponse.swift in Sources */,
+				FA8EF9F6254744A1002DD282 /* VKMarketModule.swift in Sources */,
+				FA8EF9FD254747E9002DD282 /* MainController.swift in Sources */,
 				FA8EF9DC25473EDF002DD282 /* AppDelegate.swift in Sources */,
+				FA8EFA0E25475DEA002DD282 /* Extension+NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

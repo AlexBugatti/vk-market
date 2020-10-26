@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Regular.ttf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductCollectionCell" customModule="vk_market" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="279" height="342"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="279" height="342"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tAX-fG-vsr">
+                        <rect key="frame" x="0.0" y="0.0" width="279" height="279"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="tAX-fG-vsr" secondAttribute="height" multiplier="1:1" id="Pr4-ag-9OQ"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0wA-Am-m0f">
+                        <rect key="frame" x="4" y="283" width="271" height="55"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label ffdfdsfds dfs df sdf sdf sdf sdf sdf sdfsdf dfdsfd sfd ff" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quX-hC-ivE">
+                                <rect key="frame" x="0.0" y="0.0" width="271" height="38"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                                <color key="textColor" red="0.47143357990000001" green="0.48333489889999998" blue="0.48733562229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qot-MZ-HJS">
+                                <rect key="frame" x="0.0" y="38" width="271" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="0wA-Am-m0f" firstAttribute="top" secondItem="tAX-fG-vsr" secondAttribute="bottom" constant="4" id="Hpd-Wf-quD"/>
+                <constraint firstAttribute="trailing" secondItem="0wA-Am-m0f" secondAttribute="trailing" constant="4" id="akV-18-7kI"/>
+                <constraint firstAttribute="trailing" secondItem="tAX-fG-vsr" secondAttribute="trailing" id="dNi-EI-R2w"/>
+                <constraint firstItem="tAX-fG-vsr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oQc-xU-7OM"/>
+                <constraint firstItem="0wA-Am-m0f" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="uWL-PP-17v"/>
+                <constraint firstAttribute="bottom" secondItem="0wA-Am-m0f" secondAttribute="bottom" constant="4" id="yJb-g3-xSs"/>
+                <constraint firstItem="tAX-fG-vsr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ybz-jt-YU3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="279" height="342"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="quX-hC-ivE" id="Ii1-M9-IYm"/>
+                <outlet property="pictureView" destination="tAX-fG-vsr" id="mZf-Xf-CbA"/>
+                <outlet property="priceLabel" destination="Qot-MZ-HJS" id="Jpc-Mg-CAa"/>
+            </connections>
+            <point key="canvasLocation" x="303.62318840579712" y="198.21428571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>
