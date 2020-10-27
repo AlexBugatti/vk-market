@@ -11,8 +11,8 @@ import VK_ios_sdk
 
 extension VKManager {
      
-    func getDocuments(offset: Int, completion: @escaping ([Product]?, String?)->()) {
-        let parameters = ["owner_id": -124527492]
+    func getDocuments(ownerId: Int, offset: Int, completion: @escaping ([Product]?, String?)->()) {
+        let parameters = ["owner_id": ownerId]
         
         let request = VKRequest(method: "market.get", parameters: parameters)
         request?.execute(resultBlock: { (response) in

@@ -11,7 +11,12 @@ import SDWebImage
 
 class ProductCollectionCell: UICollectionViewCell {
 
-    @IBOutlet private weak var pictureView: UIImageView!
+    @IBOutlet private weak var pictureView: UIImageView! {
+        didSet {
+            self.pictureView.layer.cornerRadius = 4
+            self.pictureView.layer.masksToBounds = true
+        }
+    }
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
     

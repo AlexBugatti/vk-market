@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA7ACED02548B3E7004F1214 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7ACECF2548B3E7004F1214 /* Brand.swift */; };
+		FA7ACED32548B8B7004F1214 /* brands.json in Resources */ = {isa = PBXBuildFile; fileRef = FA7ACED22548B8B6004F1214 /* brands.json */; };
+		FA7ACED92548C0AB004F1214 /* ProductsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7ACED72548C0AB004F1214 /* ProductsController.swift */; };
+		FA7ACEDA2548C0AB004F1214 /* ProductsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7ACED82548C0AB004F1214 /* ProductsController.xib */; };
+		FA7ACEDC2548D456004F1214 /* VKGroupsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7ACEDB2548D456004F1214 /* VKGroupsModule.swift */; };
+		FA7ACEDE2548D4C9004F1214 /* subcategories.json in Resources */ = {isa = PBXBuildFile; fileRef = FA7ACEDD2548D4C8004F1214 /* subcategories.json */; };
+		FA7ACEE02548D507004F1214 /* Subcategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7ACEDF2548D507004F1214 /* Subcategory.swift */; };
+		FA7ACEE32548D56D004F1214 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7ACEE22548D56D004F1214 /* Storage.swift */; };
+		FA7ACEE72548D7A2004F1214 /* GroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7ACEE52548D7A2004F1214 /* GroupsController.swift */; };
+		FA7ACEE82548D7A2004F1214 /* GroupsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7ACEE62548D7A2004F1214 /* GroupsController.xib */; };
+		FA7ACEEB2548D8F5004F1214 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7ACEEA2548D8F5004F1214 /* Group.swift */; };
+		FA7ACEED2548DA19004F1214 /* GroupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7ACEEC2548DA19004F1214 /* GroupResponse.swift */; };
 		FA8EF9DC25473EDF002DD282 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EF9DB25473EDF002DD282 /* AppDelegate.swift */; };
 		FA8EF9E025473EDF002DD282 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8EF9DF25473EDF002DD282 /* ViewController.swift */; };
 		FA8EF9E325473EDF002DD282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8EF9E125473EDF002DD282 /* Main.storyboard */; };
@@ -37,6 +49,18 @@
 		48222A51127A6529B1469B54 /* Pods-vk-market.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vk-market.debug.xcconfig"; path = "Target Support Files/Pods-vk-market/Pods-vk-market.debug.xcconfig"; sourceTree = "<group>"; };
 		6E8E3A3FA5CD6A98FF6181BB /* Pods-vk-market.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vk-market.release.xcconfig"; path = "Target Support Files/Pods-vk-market/Pods-vk-market.release.xcconfig"; sourceTree = "<group>"; };
 		A8EEAD080CBAEED689703AAA /* Pods_vk_market.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vk_market.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA7ACECF2548B3E7004F1214 /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		FA7ACED22548B8B6004F1214 /* brands.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brands.json; sourceTree = "<group>"; };
+		FA7ACED72548C0AB004F1214 /* ProductsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsController.swift; sourceTree = "<group>"; };
+		FA7ACED82548C0AB004F1214 /* ProductsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsController.xib; sourceTree = "<group>"; };
+		FA7ACEDB2548D456004F1214 /* VKGroupsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKGroupsModule.swift; sourceTree = "<group>"; };
+		FA7ACEDD2548D4C8004F1214 /* subcategories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = subcategories.json; sourceTree = "<group>"; };
+		FA7ACEDF2548D507004F1214 /* Subcategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subcategory.swift; sourceTree = "<group>"; };
+		FA7ACEE22548D56D004F1214 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		FA7ACEE52548D7A2004F1214 /* GroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsController.swift; sourceTree = "<group>"; };
+		FA7ACEE62548D7A2004F1214 /* GroupsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupsController.xib; sourceTree = "<group>"; };
+		FA7ACEEA2548D8F5004F1214 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		FA7ACEEC2548DA19004F1214 /* GroupResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupResponse.swift; sourceTree = "<group>"; };
 		FA8EF9D825473EDF002DD282 /* vk-market.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vk-market.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8EF9DB25473EDF002DD282 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8EF9DF25473EDF002DD282 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +117,87 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FA7ACECD2548B3B0004F1214 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EFA1F25476BF8002DD282 /* Product.swift */,
+				FA8EFA2125476F56002DD282 /* ProductResponse.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		FA7ACECE2548B3BC004F1214 /* Brand */ = {
+			isa = PBXGroup;
+			children = (
+				FA7ACECF2548B3E7004F1214 /* Brand.swift */,
+				FA7ACEDF2548D507004F1214 /* Subcategory.swift */,
+			);
+			path = Brand;
+			sourceTree = "<group>";
+		};
+		FA7ACED12548B4BC004F1214 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				FA7ACED22548B8B6004F1214 /* brands.json */,
+				FA7ACEDD2548D4C8004F1214 /* subcategories.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		FA7ACED42548C067004F1214 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FA8EFA0F25475E73002DD282 /* Catalog */,
+				FA8EF9FB254747CD002DD282 /* Main */,
+				FA8EF9F82547479E002DD282 /* Auth */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		FA7ACED52548C079004F1214 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				FA7ACEE42548D77A004F1214 /* GroupsController */,
+				FA7ACED62548C084004F1214 /* ProductsController */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		FA7ACED62548C084004F1214 /* ProductsController */ = {
+			isa = PBXGroup;
+			children = (
+				FA7ACED72548C0AB004F1214 /* ProductsController.swift */,
+				FA7ACED82548C0AB004F1214 /* ProductsController.xib */,
+			);
+			path = ProductsController;
+			sourceTree = "<group>";
+		};
+		FA7ACEE12548D546004F1214 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				FA7ACEE22548D56D004F1214 /* Storage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		FA7ACEE42548D77A004F1214 /* GroupsController */ = {
+			isa = PBXGroup;
+			children = (
+				FA7ACEE52548D7A2004F1214 /* GroupsController.swift */,
+				FA7ACEE62548D7A2004F1214 /* GroupsController.xib */,
+			);
+			path = GroupsController;
+			sourceTree = "<group>";
+		};
+		FA7ACEE92548D8CE004F1214 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				FA7ACEEA2548D8F5004F1214 /* Group.swift */,
+				FA7ACEEC2548DA19004F1214 /* GroupResponse.swift */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
 		FA8EF9CF25473EDF002DD282 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +245,7 @@
 		FA8EF9F0254742C5002DD282 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FA7ACEE12548D546004F1214 /* Storage */,
 				FA8EFA1E25476B96002DD282 /* Models */,
 				FA8EFA17254768A9002DD282 /* Views */,
 				FA8EF9F72547478E002DD282 /* Controllers */,
@@ -151,6 +257,7 @@
 		FA8EF9F12547431A002DD282 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FA7ACED12548B4BC004F1214 /* JSON */,
 				FA8EF9FE25475C99002DD282 /* Fonts */,
 			);
 			path = Resources;
@@ -161,6 +268,7 @@
 			children = (
 				FA8EF9F325474467002DD282 /* VKManager.swift */,
 				FA8EF9F5254744A1002DD282 /* VKMarketModule.swift */,
+				FA7ACEDB2548D456004F1214 /* VKGroupsModule.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -168,9 +276,8 @@
 		FA8EF9F72547478E002DD282 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA8EFA0F25475E73002DD282 /* Catalog */,
-				FA8EF9FB254747CD002DD282 /* Main */,
-				FA8EF9F82547479E002DD282 /* Auth */,
+				FA7ACED52548C079004F1214 /* Xib */,
+				FA7ACED42548C067004F1214 /* Storyboard */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -264,8 +371,9 @@
 		FA8EFA1E25476B96002DD282 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FA8EFA1F25476BF8002DD282 /* Product.swift */,
-				FA8EFA2125476F56002DD282 /* ProductResponse.swift */,
+				FA7ACEE92548D8CE004F1214 /* Group */,
+				FA7ACECE2548B3BC004F1214 /* Brand */,
+				FA7ACECD2548B3B0004F1214 /* Product */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -333,10 +441,14 @@
 				FA8EF9E825473EE7002DD282 /* LaunchScreen.storyboard in Resources */,
 				FA8EFA0C25475C9A002DD282 /* SFProDisplay-Semibold.ttf in Resources */,
 				FA8EF9E525473EE7002DD282 /* Assets.xcassets in Resources */,
+				FA7ACEE82548D7A2004F1214 /* GroupsController.xib in Resources */,
+				FA7ACEDA2548C0AB004F1214 /* ProductsController.xib in Resources */,
 				FA8EFA1D254768FD002DD282 /* ProductCollectionCell.xib in Resources */,
 				FA8EFA0725475C9A002DD282 /* TT Commons DemiBold.otf in Resources */,
+				FA7ACED32548B8B7004F1214 /* brands.json in Resources */,
 				FA8EFA0B25475C9A002DD282 /* SFProDisplay-Regular.ttf in Resources */,
 				FA8EFA0A25475C9A002DD282 /* SFProDisplay-Light.ttf in Resources */,
+				FA7ACEDE2548D4C9004F1214 /* subcategories.json in Resources */,
 				FA8EFA0825475C9A002DD282 /* TTCommons-DemiBold.ttf in Resources */,
 				FA8EF9E325473EDF002DD282 /* Main.storyboard in Resources */,
 				FA8EFA0925475C9A002DD282 /* SFProDisplay-Medium.ttf in Resources */,
@@ -395,14 +507,22 @@
 				FA8EFA1625476024002DD282 /* Extension+Font.swift in Sources */,
 				FA8EFA1C254768FD002DD282 /* ProductCollectionCell.swift in Sources */,
 				FA8EF9F425474467002DD282 /* VKManager.swift in Sources */,
+				FA7ACEED2548DA19004F1214 /* GroupResponse.swift in Sources */,
+				FA7ACEEB2548D8F5004F1214 /* Group.swift in Sources */,
 				FA8EFA1125475E8C002DD282 /* CatalogController.swift in Sources */,
 				FA8EF9E025473EDF002DD282 /* ViewController.swift in Sources */,
+				FA7ACEE32548D56D004F1214 /* Storage.swift in Sources */,
+				FA7ACEE72548D7A2004F1214 /* GroupsController.swift in Sources */,
+				FA7ACED92548C0AB004F1214 /* ProductsController.swift in Sources */,
+				FA7ACEDC2548D456004F1214 /* VKGroupsModule.swift in Sources */,
 				FA8EFA2025476BF8002DD282 /* Product.swift in Sources */,
 				FA8EF9FA254747BE002DD282 /* AuthController.swift in Sources */,
 				FA8EFA1425475FC2002DD282 /* Pallete.swift in Sources */,
 				FA8EFA2225476F56002DD282 /* ProductResponse.swift in Sources */,
 				FA8EF9F6254744A1002DD282 /* VKMarketModule.swift in Sources */,
 				FA8EF9FD254747E9002DD282 /* MainController.swift in Sources */,
+				FA7ACEE02548D507004F1214 /* Subcategory.swift in Sources */,
+				FA7ACED02548B3E7004F1214 /* Brand.swift in Sources */,
 				FA8EF9DC25473EDF002DD282 /* AppDelegate.swift in Sources */,
 				FA8EFA0E25475DEA002DD282 /* Extension+NavigationBar.swift in Sources */,
 			);

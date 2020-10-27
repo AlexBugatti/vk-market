@@ -36,7 +36,7 @@ class VKManager: NSObject, VKSdkUIDelegate, VKSdkDelegate {
     static let shared = VKManager()
     
     static let APP_ID = "7641761"
-    private let scope = ["market"]
+    private let scope = ["market", "groups"]
     
     override init() {
         super.init()

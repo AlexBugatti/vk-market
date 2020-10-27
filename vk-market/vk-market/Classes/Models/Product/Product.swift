@@ -27,7 +27,7 @@ class Product: Decodable, Productable {
     var availability: Int
     
     var priceString: String {
-        return self.price.amount
+        return self.price.text
     }
     var pictureURL: URL? {
         return URL(string: thumbPhoto)

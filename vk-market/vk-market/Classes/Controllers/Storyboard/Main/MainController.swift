@@ -35,7 +35,7 @@ class MainController: UIViewController {
     }
     
     private func loadProducts() {
-        VKManager.shared.getDocuments(offset: 0) { (products, errorString) in
+        VKManager.shared.getDocuments(ownerId: -13643401, offset: 0) { (products, errorString) in
             self.products = products ?? []
             print(products ?? "")
         }
@@ -67,15 +67,15 @@ extension MainController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (self.view.frame.width - 24) / 2
+        let width = (self.view.frame.width - 36) / 2
         let height = width + 60
         
         return CGSize(width: width, height: height)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 8
+//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 8
