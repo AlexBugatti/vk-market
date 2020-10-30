@@ -17,6 +17,16 @@ class MainController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = "Главная"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationItem.title = ""
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,6 +49,12 @@ class MainController: UIViewController {
             self.products = products ?? []
             print(products ?? "")
         }
+    }
+    
+    private func showProduct(product: Product) {
+        let vc = DetailProductController(product: product)
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 
@@ -73,9 +89,10 @@ extension MainController: UICollectionViewDelegate, UICollectionViewDataSource, 
         return CGSize(width: width, height: height)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 8
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let product = self.products[indexPath.row]
+        self.showProduct(product: product)
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 8

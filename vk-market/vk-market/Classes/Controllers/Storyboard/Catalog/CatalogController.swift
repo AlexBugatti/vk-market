@@ -26,13 +26,22 @@ class CatalogController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    private func setupUI() {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationItem.title = "Каталог"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationItem.title = ""
+    }
+    
+    private func setupUI() {
         self.navigationController?.navigationBar.showSeparateView()
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.register(CategoryCell.self)
     }
     
     private func loadBrands() {
@@ -64,8 +73,8 @@ extension CatalogController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let subcategory = self.subcategories[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = subcategory.name
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as CategoryCell
+        cell.setupUI(subcategory)
         
         return cell
     }

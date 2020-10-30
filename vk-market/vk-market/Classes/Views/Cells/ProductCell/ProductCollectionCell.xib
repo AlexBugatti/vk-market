@@ -11,6 +11,9 @@
         <array key="SFProDisplay-Regular.ttf">
             <string>SFProDisplay-Regular</string>
         </array>
+        <array key="SFProDisplay-Semibold.ttf">
+            <string>SFProDisplay-Semibold</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -28,18 +31,18 @@
                             <constraint firstAttribute="width" secondItem="tAX-fG-vsr" secondAttribute="height" multiplier="1:1" id="Pr4-ag-9OQ"/>
                         </constraints>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="0wA-Am-m0f">
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0wA-Am-m0f">
                         <rect key="frame" x="4" y="291" width="271" height="53"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label ffdfdsfds dfs df sdf sdf sdf sdf sdf sdfsdf dfdsfd sfd ff" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quX-hC-ivE">
-                                <rect key="frame" x="0.0" y="0.0" width="271" height="32.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="271" height="34"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                 <color key="textColor" red="0.47143357990000001" green="0.48333489889999998" blue="0.48733562229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qot-MZ-HJS">
-                                <rect key="frame" x="0.0" y="36.5" width="271" height="16.5"/>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                                <rect key="frame" x="0.0" y="36" width="271" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

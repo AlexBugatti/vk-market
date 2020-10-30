@@ -55,6 +55,11 @@ class ProductsController: UIViewController {
         }
     }
     
+    private func showProduct(product: Product) {
+        let vc = DetailProductController(product: product)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -78,6 +83,11 @@ extension ProductsController: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionCell", for: indexPath) as! ProductCollectionCell
         cell.setupUI(item: product)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let product = self.products[indexPath.row]
+        self.showProduct(product: product)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

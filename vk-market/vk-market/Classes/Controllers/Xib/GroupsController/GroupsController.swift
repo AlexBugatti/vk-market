@@ -38,7 +38,7 @@ class GroupsController: UIViewController {
     private func setupUI() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.register(GroupCell.self)
     }
     
     func loadGroups() {
@@ -72,9 +72,8 @@ extension GroupsController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let group = self.groups[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = group.name
-        cell.imageView?.sd_setImage(with: URL.init(string: group.photo50), completed: nil)
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as GroupCell
+        cell.setupUI(group)
         
         return cell
     }
@@ -83,7 +82,10 @@ extension GroupsController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         let group = self.groups[indexPath.row]
         self.showProducts(group: group)
-        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
     
 }

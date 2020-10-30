@@ -1,37 +1,61 @@
 [{
 "id": 0,
-"name": "Гардероб"
+"name": "Гардероб",
+"imageName": "hanger",
+"imageColor": "blue"
 }, {
 "id": 2,
-"name": "Электроника"
+"name": "Электроника",
+"imageName": "electronic",
+"imageColor": "red"
 }, {
 "id": 3,
-"name": "Компьютеры и ПО"
+"name": "Компьютеры и ПО",
+"imageName": "laptop",
+"imageColor": "blue"
 }, {
 "id": 4,
-"name": "Транспорт"
+"name": "Транспорт",
+"imageName": "transport",
+"imageColor": "blue"
 }, {
 "id": 1,
-"name": "Детские товары"
+"name": "Детские товары",
+"imageName": "child",
+"imageColor": "orange"
 }, {
 "id": 6,
-"name": "Дом и дача"
+"name": "Дом и дача",
+"imageName": "house",
+"imageColor": "gray"
 }, {
 "id": 7,
-"name": "Красота и здоровье"
+"name": "Красота и здоровье",
+"imageName": "health",
+"imageColor": "red"
 }, {
 "id": 8,
-"name": "Спорт и отдых"
+"name": "Спорт и отдых",
+"imageName": "sport",
+"imageColor": "orange"
 }, {
 "id": 9,
-"name": "Досуг и подарки"
+"name": "Досуг и подарки",
+"imageName": "hobby",
+"imageColor": "violet"
 }, {
 "id": 10,
-"name": "Домашние питомцы"
+"name": "Домашние питомцы",
+"imageName": "pet",
+"imageColor": "gray"
 }, {
 "id": 11,
-"name": "Продукты питания"
+"name": "Продукты питания",
+"imageName": "product",
+"imageColor": "blue"
 }, {
 "id": 12,
-"name": "Услуги"
+"name": "Услуги",
+"imageName": "service",
+"imageColor": "gray"
 }]
