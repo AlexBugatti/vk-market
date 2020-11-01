@@ -19,7 +19,7 @@ class ProductList {
     }
     
     static var cross: ProductList {
-        return ProductList.init(title: "Осень. Кроссы", productIds: ["-13643401_3435117",
+        return ProductList.init(title: "Осень. Кроссы.", productIds: ["-13643401_3435117",
                                                                 "-13643401_3421155",
                                                                 "-48067211_4232524",
                                                                 "-48067211_4330907",
@@ -34,6 +34,22 @@ class ProductList {
                                                                 "-13643401_3883190",
                                                                 "-13643401_3960361"])
     }
+    static var kitchen: ProductList {
+        return ProductList.init(title: "Bork. Лучшее.", productIds: ["-44074971_2205648",
+                                                                "-44074971_2205127",
+                                                                "-44074971_3991520",
+                                                                "-44074971_2203529",
+                                                                "-44074971_2211003"])
+    }
+    static var samsung: ProductList {
+        return ProductList.init(title: "Техника Samsung.", productIds: ["-2611_4168008",
+                                                                "-2611_3109601",
+                                                                "-2611_4609785",
+                                                                "-2611_4609898",
+                                                                "-2611_4609674",
+                                                                "-2611_4609569"])
+    }
+    
 }
 
 class ProductManager {

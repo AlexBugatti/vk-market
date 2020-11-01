@@ -46,7 +46,7 @@ class MainController: UIViewController {
     }
     
     private func loadProducts() {
-        ProductManager.getDownloadProductList(list: [ProductList.cross, ProductList.winter]) { (productList) in
+        ProductManager.getDownloadProductList(list: [ProductList.cross, ProductList.winter, ProductList.kitchen, ProductList.samsung]) { (productList) in
             self.productList = productList
         }
     }
