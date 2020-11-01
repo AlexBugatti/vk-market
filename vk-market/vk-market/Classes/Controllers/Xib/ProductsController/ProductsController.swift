@@ -18,10 +18,11 @@ class ProductsController: UIViewController {
             self.collectionView?.reloadData()
         }
     }
-    private var group: Group
+    private var requestParameters: ProductParameterRequestable
+    private var albums: [Album] = []
     
-    init(group: Group) {
-        self.group = group
+    init(requestParameters: ProductParameterRequestable) {
+        self.requestParameters = requestParameters
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -38,20 +39,34 @@ class ProductsController: UIViewController {
     }
     
     private func setupUI() {
-        self.navigationItem.title = self.group.name
+        self.navigationItem.title = self.requestParameters.title
         self.navigationController?.navigationBar.showSeparateView()
         
-        self.collectionView.register(UINib(nibName: "ProductCollectionCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionCell")
+        self.collectionView.register(ProductCollectionCell.self)
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
+        self.collectionView.contentInset = UIEdgeInsets(top: 8, left: Constants.defaultPadding, bottom: 0, right: 0)
+        self.collectionView.register(AlbumView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Header")
     }
     
     private func loadProducts() {
         let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
-        VKManager.shared.getDocuments(ownerId: -self.group.id, offset: 0) { (products, errorString) in
+        VKManager.shared.getProducts(ownerId: self.requestParameters.ownerId, albumId: self.requestParameters.albumId) { (products, errorString) in
             hud.hide(animated: true)
             self.products = products ?? []
+            if self.requestParameters.albumId == 0 {
+                self.loadAlbums()
+            }
             print(products ?? "")
+        }
+    }
+    
+    private func loadAlbums() {
+        VKManager.shared.getAlbums(ownerId: self.requestParameters.ownerId) { (albums, errorString) in
+            if let albums = albums, albums.count > 0 {
+                self.albums = albums
+                self.collectionView.reloadData()
+            }
         }
     }
     
@@ -59,6 +74,12 @@ class ProductsController: UIViewController {
         let vc = DetailProductController(product: product)
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    private func showProducts(requestParameters: ProductParameterRequestable) {
+        let vc = ProductsController(requestParameters: requestParameters)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
 
     /*
@@ -80,7 +101,7 @@ extension ProductsController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let product = self.products[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionCell", for: indexPath) as! ProductCollectionCell
+        let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as ProductCollectionCell
         cell.setupUI(item: product)
         return cell
     }
@@ -91,18 +112,43 @@ extension ProductsController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (self.view.frame.width - 36) / 2
-        let height = width + 64
+                
+        let width = (self.view.frame.width - Constants.defaultPadding) / 2
+        let height = width + 54
         
         return CGSize(width: width, height: height)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 8
-//    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if kind.isEqual(UICollectionView.elementKindSectionHeader) {
+            let albumHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath) as! AlbumView
+            albumHeaderView.didAlbumTapped = { album in
+                self.showProducts(requestParameters: album)
+            }
+            albumHeaderView.setAlbums(self.albums)
+            return albumHeaderView
+        } else {
+            return UICollectionReusableView()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
+        if self.albums.count == 0 {
+            return CGSize.zero
+        }
+        
+        return CGSize(width: self.view.frame.width,
+                      height: self.view.frame.width * Constants.imageRatio + 44)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 12
+        return CGFloat.leastNormalMagnitude
     }
     
 }

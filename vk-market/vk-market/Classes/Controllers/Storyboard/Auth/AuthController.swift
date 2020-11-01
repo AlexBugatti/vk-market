@@ -22,6 +22,7 @@ class AuthController: UIViewController {
 
         VKManager.shared.getAuthorized { (success) in
             if success {
+                VKManager.shared
                 self.performSegue(withIdentifier: "toMain", sender: nil)
             } else {
                 

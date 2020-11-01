@@ -15,7 +15,7 @@ class GroupCell: UITableViewCell {
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var logoView: UIImageView! {
         didSet {
-            self.logoView.layer.cornerRadius = 4
+            self.logoView.layer.cornerRadius = 34
             self.logoView.layer.masksToBounds = true
         }
     }

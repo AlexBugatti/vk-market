@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Regular.ttf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AlbumCell" customModule="vk_market" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="379" height="220"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="379" height="220"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DOm-En-QPB">
+                        <rect key="frame" x="0.0" y="0.0" width="367" height="174"/>
+                        <color key="backgroundColor" red="0.91139096019999999" green="0.93104022740000003" blue="0.94371837380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="lCz-dg-aJA">
+                        <rect key="frame" x="0.0" y="174" width="379" height="46"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5b-8L-Cev">
+                                <rect key="frame" x="0.0" y="0.0" width="379" height="6"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6" id="Vif-pE-36m"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tv7-1R-CM2">
+                                <rect key="frame" x="0.0" y="7" width="379" height="17"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 предложения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTP-Rb-pdL">
+                                <rect key="frame" x="0.0" y="24.5" width="379" height="14.5"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                                <color key="textColor" red="0.66345751289999999" green="0.69642931220000004" blue="0.73381829259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w6y-qn-BGK">
+                                <rect key="frame" x="0.0" y="40" width="379" height="6"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="6" id="DJ5-qG-URO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="46" id="z7L-SI-0Qg"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="lCz-dg-aJA" secondAttribute="trailing" id="IGE-Gm-FJa"/>
+                <constraint firstItem="DOm-En-QPB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="NOa-iS-5dg"/>
+                <constraint firstItem="lCz-dg-aJA" firstAttribute="top" secondItem="DOm-En-QPB" secondAttribute="bottom" id="V6b-3g-13x"/>
+                <constraint firstAttribute="bottom" secondItem="lCz-dg-aJA" secondAttribute="bottom" id="fTb-Gb-l3g"/>
+                <constraint firstAttribute="trailing" secondItem="DOm-En-QPB" secondAttribute="trailing" constant="12" id="l6O-FB-X78"/>
+                <constraint firstItem="DOm-En-QPB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mlo-Nh-YU4"/>
+                <constraint firstItem="lCz-dg-aJA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rwV-Cq-exo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="379" height="220"/>
+            <connections>
+                <outlet property="countLabel" destination="YTP-Rb-pdL" id="Taq-sT-MkI"/>
+                <outlet property="logoView" destination="DOm-En-QPB" id="fDy-A1-ZBP"/>
+                <outlet property="titleLabel" destination="tv7-1R-CM2" id="1JJ-5S-8Zi"/>
+            </connections>
+            <point key="canvasLocation" x="288" y="153"/>
+        </collectionViewCell>
+    </objects>
+</document>

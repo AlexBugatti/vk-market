@@ -21,11 +21,19 @@ class PhotoSlider: NibView {
             self.collectionView.delegate = self
             self.collectionView.dataSource = self
             self.collectionView.register(PhotoSliderCell.self)
+            self.collectionView.isUserInteractionEnabled = true
+            self.collectionView.isPagingEnabled = true
         }
     }
+    @IBOutlet weak var pageControl: UIPageControl!
     
     func setupUI(strings: [String]) {
         self.images = strings
+        self.pageControl.numberOfPages = strings.count
+        
+        strings.forEach { (imagePath) in
+            UIImageView().sd_setImage(with: URL(string: imagePath), completed: nil)
+        }
     }
     
     /*
@@ -38,7 +46,7 @@ class PhotoSlider: NibView {
 
 }
 
-extension PhotoSlider: UICollectionViewDelegate, UICollectionViewDataSource {
+extension PhotoSlider: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
@@ -51,5 +59,21 @@ extension PhotoSlider: UICollectionViewDelegate, UICollectionViewDataSource {
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.frame.width, height: self.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        self.pageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+    }
+    
 }

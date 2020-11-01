@@ -8,12 +8,28 @@
 
 import UIKit
 
-class Group: Decodable {
+protocol ProductParameterRequestable {
+    var ownerId: Int { get }
+    var albumId: Int { get }
+    var title: String { get }
+}
+
+class Group: Decodable, ProductParameterRequestable {
 
     var name: String
     var id: Int
     var photo50: String
     var photo200: String
+    
+    var ownerId: Int {
+        return -self.id
+    }
+    var albumId: Int {
+        return 0
+    }
+    var title: String {
+        return name
+    }
     
     enum CodingKeys: String, CodingKey {
         case name, id, photo50 = "photo_50", photo200 = "photo_200"

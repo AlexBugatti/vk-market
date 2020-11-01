@@ -44,7 +44,7 @@ class VKManager: NSObject, VKSdkUIDelegate, VKSdkDelegate {
     }
     
     func initialize() {
-        let vkInstance = VKSdk.initialize(withAppId: VKManager.APP_ID)
+        let vkInstance = VKSdk.initialize(withAppId: VKManager.APP_ID, apiVersion: "5.124")
         vkInstance?.register(self)
         vkInstance?.uiDelegate = self
     }

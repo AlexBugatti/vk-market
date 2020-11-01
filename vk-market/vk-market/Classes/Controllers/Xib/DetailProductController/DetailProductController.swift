@@ -27,6 +27,8 @@ class DetailProductController: UIViewController {
         }
     }
     @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var photoSlider: PhotoSlider!
+    @IBOutlet private weak var favoriteButton: UIButton!
     
     var product: Product
     private var comments: [Comment]? {
@@ -66,6 +68,9 @@ class DetailProductController: UIViewController {
             self.showCommentController(product: product)
         }
         self.commentView.setLikes(count: self.product.likes?.count ?? 0)
+        self.photoSlider.setupUI(strings: self.product.photos?.compactMap({ $0.photoURL }) ?? [product.pictureURL!.absoluteString])
+        let image = product.isFavorite ? #imageLiteral(resourceName: "star-active") : #imageLiteral(resourceName: "star")
+        self.favoriteButton.setImage(image, for: .normal)
         self.loadComments()
     }
     
@@ -75,11 +80,38 @@ class DetailProductController: UIViewController {
         }
     }
     
+    private func addFavorite() {
+        self.favoriteButton.setImage(#imageLiteral(resourceName: "star-active"), for: .normal)
+        VKManager.shared.addFavoriteProduct(ownerId: product.ownerId, id: product.id) { (success, errorString) in
+            self.product.isFavorite = success
+            self.setup(product: self.product)
+        }
+    }
+    
+    private func removeFavorite() {
+        self.favoriteButton.setImage(#imageLiteral(resourceName: "star"), for: .normal)
+        VKManager.shared.addFavoriteProduct(ownerId: product.ownerId, id: product.id) { (success, errorString) in
+            self.product.isFavorite = !success
+            self.setup(product: self.product)
+        }
+    }
+    
     private func showCommentController(product: Product) {
         let vc = CommentsController(ownerId: product.ownerId, itemId: product.id)
         vc.comments = self.comments ?? []
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    // MARK: - Actions
+    
+    @IBAction func onDidFavoriteTapped(_ sender: Any) {
+        if self.product.isFavorite {
+            self.removeFavorite()
+        } else {
+            self.addFavorite()
+        }
+    }
+    
 
     /*
     // MARK: - Navigation

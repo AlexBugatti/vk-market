@@ -36,6 +36,7 @@ class GroupsController: UIViewController {
     }
     
     private func setupUI() {
+        self.navigationItem.title = self.subcategory.name
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(GroupCell.self)
@@ -48,7 +49,7 @@ class GroupsController: UIViewController {
     }
 
     func showProducts(group: Group) {
-        let vc = ProductsController(group: group)
+        let vc = ProductsController(requestParameters: group)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 

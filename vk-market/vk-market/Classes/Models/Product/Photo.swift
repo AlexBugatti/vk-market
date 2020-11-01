@@ -35,8 +35,14 @@ class Photo: Decodable {
     var date: Int64  //integer    дата добавления в формате Unixtime.
     var coordinate: CLLocationCoordinate2D?
     var sizes: [Size]? //array    массив с копиями изображения в разных размерах. Каждый объект массива содержит следующие поля:
-    var photoPath: String
-    var photoURL: String?
+//    var photoPath: String
+    var photoURL: String? {
+        if let sizes = sizes, let size = sizes.first(where: { $0.type == "x" }) {
+            return size.url
+        }
+        
+        return nil
+    }
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -47,8 +53,8 @@ class Photo: Decodable {
         case date
         case sizes
         case lat, long
-        case photo_75
-        case photo_604
+//        case photo_75
+//        case photo_604
     }
     
     required init(from decoder: Decoder) throws {
@@ -59,9 +65,9 @@ class Photo: Decodable {
         userId = try? container.decode(Int64.self, forKey: .userId)
         text = try container.decode(String.self, forKey: .text)
         date = try container.decode(Int64.self, forKey: .date)
-        sizes = try container.decode([Size].self, forKey: .sizes)
-        photoPath = try container.decode(String.self, forKey: .photo_75)
-        photoURL = try? container.decode(String.self, forKey: .photo_604)
+        sizes = try? container.decode([Size].self, forKey: .sizes)
+//        photoPath = try container.decode(String.self, forKey: .photo_75)
+//        photoURL = try? container.decode(String.self, forKey: .photo_604)
         
         if let latString = try? container.decode(Double.self, forKey: .lat), let longString = try? container.decode(Double.self, forKey: .long) {
             self.coordinate = CLLocationCoordinate2D(latitude: latString,

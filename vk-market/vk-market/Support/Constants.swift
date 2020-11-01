@@ -14,4 +14,7 @@ class Constants {
     static let textfieldCornerRadius: CGFloat = 10
     static let systemCornerRadius: CGFloat = 10
 
+    static let defaultPadding: CGFloat = 12
+    static let imageRatio: CGFloat = 35 / 61
+    
 }
