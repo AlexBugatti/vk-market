@@ -21,6 +21,8 @@
 		FA5B19C1254A06B800AC5A06 /* DetailProductController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5B19BF254A06B800AC5A06 /* DetailProductController.xib */; };
 		FA5B19C4254A26C900AC5A06 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5B19C3254A26C900AC5A06 /* MainButton.swift */; };
 		FA5B19C6254A26F400AC5A06 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5B19C5254A26F400AC5A06 /* Constants.swift */; };
+		FA6C1B40254E896F009C1C53 /* ProductTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C1B3E254E896F009C1C53 /* ProductTableCell.swift */; };
+		FA6C1B41254E896F009C1C53 /* ProductTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6C1B3F254E896F009C1C53 /* ProductTableCell.xib */; };
 		FA72D7C3254DC80700AE51D2 /* VKUserModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72D7C2254DC80700AE51D2 /* VKUserModule.swift */; };
 		FA72D7C6254DC85600AE51D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72D7C5254DC85600AE51D2 /* User.swift */; };
 		FA72D7C8254DD34200AE51D2 /* VKFavoriteModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA72D7C7254DD34200AE51D2 /* VKFavoriteModule.swift */; };
@@ -101,6 +103,8 @@
 		FA5B19BF254A06B800AC5A06 /* DetailProductController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailProductController.xib; sourceTree = "<group>"; };
 		FA5B19C3254A26C900AC5A06 /* MainButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 		FA5B19C5254A26F400AC5A06 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FA6C1B3E254E896F009C1C53 /* ProductTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableCell.swift; sourceTree = "<group>"; };
+		FA6C1B3F254E896F009C1C53 /* ProductTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableCell.xib; sourceTree = "<group>"; };
 		FA72D7C2254DC80700AE51D2 /* VKUserModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKUserModule.swift; sourceTree = "<group>"; };
 		FA72D7C5254DC85600AE51D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FA72D7C7254DD34200AE51D2 /* VKFavoriteModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKFavoriteModule.swift; sourceTree = "<group>"; };
@@ -244,6 +248,15 @@
 				FA5B19C3254A26C900AC5A06 /* MainButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		FA6C1B3D254E894B009C1C53 /* ProductTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA6C1B3E254E896F009C1C53 /* ProductTableCell.swift */,
+				FA6C1B3F254E896F009C1C53 /* ProductTableCell.xib */,
+			);
+			path = ProductTableCell;
 			sourceTree = "<group>";
 		};
 		FA72D7C4254DC84500AE51D2 /* User */ = {
@@ -576,6 +589,7 @@
 		FA8EFA18254768B6002DD282 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				FA6C1B3D254E894B009C1C53 /* ProductTableCell */,
 				FA72D7D0254E501A00AE51D2 /* AlbumProductCell */,
 				FA77B13E254B6C2E0024B65D /* UserCommentCell */,
 				FA5B19B82549FB9000AC5A06 /* GroupCell */,
@@ -696,6 +710,7 @@
 				FA7ACEE82548D7A2004F1214 /* GroupsController.xib in Resources */,
 				FA77B142254B6C5B0024B65D /* UserCommentCell.xib in Resources */,
 				FA50F515254CD9B70065DDD6 /* AlbumCell.xib in Resources */,
+				FA6C1B41254E896F009C1C53 /* ProductTableCell.xib in Resources */,
 				FAE78502254B4E1E00758093 /* CommentView.xib in Resources */,
 				FA7ACEDA2548C0AB004F1214 /* ProductsController.xib in Resources */,
 				FA72D7CD254E25A300AE51D2 /* ProductSliderCell.xib in Resources */,
@@ -787,6 +802,7 @@
 				FA7ACED92548C0AB004F1214 /* ProductsController.swift in Sources */,
 				FA72D7C3254DC80700AE51D2 /* VKUserModule.swift in Sources */,
 				FA72D7CC254E25A300AE51D2 /* ProductSliderCell.swift in Sources */,
+				FA6C1B40254E896F009C1C53 /* ProductTableCell.swift in Sources */,
 				FA7ACEDC2548D456004F1214 /* VKGroupsModule.swift in Sources */,
 				FA5B19B52549E79D00AC5A06 /* Extension+UITableView.swift in Sources */,
 				FAF4DB6D254A3A5700E02C9B /* Photo.swift in Sources */,
@@ -958,13 +974,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HDC848MRAM;
 				INFOPLIST_FILE = "vk-market/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.abugaev.vk-market";
+				PRODUCT_BUNDLE_IDENTIFIER = app.majorauto.studio.staff;
 				PRODUCT_NAME = "VK Market";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -977,13 +994,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HDC848MRAM;
 				INFOPLIST_FILE = "vk-market/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.abugaev.vk-market";
+				PRODUCT_BUNDLE_IDENTIFIER = app.majorauto.studio.staff;
 				PRODUCT_NAME = "VK Market";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

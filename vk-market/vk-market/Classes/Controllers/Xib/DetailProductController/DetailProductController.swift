@@ -125,7 +125,7 @@ class DetailProductController: UIViewController {
         if let urlString = product.url, let url = URL(string: urlString) {
             productURL = url
         } else {
-            let urlPath = "https://vk.com/market-\(self.product.ownerId)?w=prouduct-\(product.ownerId)_\(product.id)"
+            let urlPath = "https://vk.com/market\(self.product.ownerId)?w=product\(product.ownerId)_\(product.id)"
             productURL = URL.init(string: urlPath)
         }
         UIApplication.shared.open(productURL, options: [:], completionHandler: nil)

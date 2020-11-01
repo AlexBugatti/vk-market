@@ -149,26 +149,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sce-21-LiB">
-                                <rect key="frame" x="0.0" y="166" width="414" height="647"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lED-KY-jmT">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Fdw-S5-yBH">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Srl-Hy-fPI">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEB-PV-2ih">
                                 <rect key="frame" x="0.0" y="88" width="414" height="70"/>
                                 <subviews>
@@ -208,13 +188,17 @@
                                     <constraint firstAttribute="height" constant="70" id="tfp-eB-d35"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2S0-7R-BTs">
+                                <rect key="frame" x="0.0" y="166" width="414" height="647"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="sce-21-LiB" firstAttribute="bottom" secondItem="3o9-yy-HAH" secondAttribute="bottom" id="33M-Dr-6fz"/>
-                            <constraint firstItem="sce-21-LiB" firstAttribute="top" secondItem="jEB-PV-2ih" secondAttribute="bottom" constant="8" symbolic="YES" id="DYE-uq-hja"/>
-                            <constraint firstItem="sce-21-LiB" firstAttribute="leading" secondItem="3o9-yy-HAH" secondAttribute="leading" id="dB8-hp-sV8"/>
-                            <constraint firstItem="sce-21-LiB" firstAttribute="trailing" secondItem="3o9-yy-HAH" secondAttribute="trailing" id="tB6-pF-EF7"/>
+                            <constraint firstItem="2S0-7R-BTs" firstAttribute="top" secondItem="jEB-PV-2ih" secondAttribute="bottom" constant="8" symbolic="YES" id="G7L-nb-uFh"/>
+                            <constraint firstItem="2S0-7R-BTs" firstAttribute="leading" secondItem="3o9-yy-HAH" secondAttribute="leading" id="JXA-ml-PW1"/>
+                            <constraint firstItem="3o9-yy-HAH" firstAttribute="trailing" secondItem="2S0-7R-BTs" secondAttribute="trailing" id="PLT-ZE-b6L"/>
+                            <constraint firstItem="3o9-yy-HAH" firstAttribute="bottom" secondItem="2S0-7R-BTs" secondAttribute="bottom" id="U2t-gA-BE1"/>
                             <constraint firstItem="jEB-PV-2ih" firstAttribute="top" secondItem="3o9-yy-HAH" secondAttribute="top" id="uew-q2-4AX"/>
                             <constraint firstItem="jEB-PV-2ih" firstAttribute="trailing" secondItem="3o9-yy-HAH" secondAttribute="trailing" id="vLI-lY-fLL"/>
                             <constraint firstItem="jEB-PV-2ih" firstAttribute="leading" secondItem="3o9-yy-HAH" secondAttribute="leading" id="wUG-Pg-ZhC"/>
@@ -230,9 +214,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="sce-21-LiB" id="DUS-wV-2tK"/>
                         <outlet property="descriptionLabel" destination="2qL-L7-M5M" id="MA3-TT-efT"/>
                         <outlet property="logoView" destination="u4b-eX-XcZ" id="Ks1-BY-Mvu"/>
+                        <outlet property="tableView" destination="2S0-7R-BTs" id="AeT-gL-SY3"/>
                         <outlet property="titleLabel" destination="8gF-3Z-oxm" id="Yt9-DO-REM"/>
                     </connections>
                 </viewController>

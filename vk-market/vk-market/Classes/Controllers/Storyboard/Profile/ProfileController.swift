@@ -13,12 +13,12 @@ class ProfileController: UIViewController {
 
     private var products: [Product] = [] {
         didSet {
-            self.collectionView?.reloadData()
+            self.tableView?.reloadData()
             self.descriptionLabel.text = "\(self.products.count) товара в избранном"
         }
     }
     
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var logoView: UIImageView! {
         didSet {
             self.logoView.layer.cornerRadius = self.logoView.frame.height / 2
@@ -27,6 +27,11 @@ class ProfileController: UIViewController {
     }
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationItem.title = ""
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +44,10 @@ class ProfileController: UIViewController {
     
     private func setupUI() {
         self.navigationController?.navigationBar.showSeparateView()
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-        self.collectionView.register(ProductCollectionCell.self)
-        self.collectionView.contentInset = UIEdgeInsets(top: 0, left: Constants.defaultPadding, bottom: 0, right: 0)
-        self.collectionView.showSeparate()
-
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.register(ProductTableCell.self)
+        self.tableView.showSeparate()
     }
     
     private func loadUser() {
@@ -90,44 +93,29 @@ class ProfileController: UIViewController {
 
 }
 
-extension ProfileController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return products.count
+extension ProfileController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.products.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let product = self.products[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as ProductCollectionCell
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as ProductTableCell
         cell.setupUI(item: product)
+        
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let product = self.products[indexPath.row]
         self.showProduct(product: product)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        if self.products.count == 1 {
-            let width = (self.view.frame.width - Constants.defaultPadding) / 2
-            let height = width + 64
-            
-            return CGSize(width: self.view.frame.width - Constants.defaultPadding, height: height)
-        }
-        
-        let width = (self.view.frame.width - Constants.defaultPadding) / 2
-        let height = width + 64
-        
-        return CGSize(width: width, height: height)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat.leastNormalMagnitude
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat.leastNormalMagnitude
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 72
     }
     
 }
+
