@@ -29,6 +29,7 @@ class DetailProductController: UIViewController {
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var photoSlider: PhotoSlider!
     @IBOutlet private weak var favoriteButton: UIButton!
+    @IBOutlet private weak var actionButton: MainButton!
     
     var product: Product
     private var comments: [Comment]? {
@@ -46,6 +47,11 @@ class DetailProductController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.title = "Товар"
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationItem.title = ""
@@ -53,8 +59,7 @@ class DetailProductController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationItem.title = "Товар"
+        
         self.setup(product: self.product)
         // Do any additional setup after loading the view.
     }
@@ -71,6 +76,9 @@ class DetailProductController: UIViewController {
         self.photoSlider.setupUI(strings: self.product.photos?.compactMap({ $0.photoURL }) ?? [product.pictureURL!.absoluteString])
         let image = product.isFavorite ? #imageLiteral(resourceName: "star-active") : #imageLiteral(resourceName: "star")
         self.favoriteButton.setImage(image, for: .normal)
+        if let buttonTitle = product.buttonTitle {
+            self.actionButton.setTitle(buttonTitle, for: .normal)
+        }
         self.loadComments()
     }
     
@@ -110,6 +118,17 @@ class DetailProductController: UIViewController {
         } else {
             self.addFavorite()
         }
+    }
+    
+    @IBAction func onDidActionTapped(_ sender: Any) {
+        var productURL: URL!
+        if let urlString = product.url, let url = URL(string: urlString) {
+            productURL = url
+        } else {
+            let urlPath = "https://vk.com/market-\(self.product.ownerId)?w=prouduct-\(product.ownerId)_\(product.id)"
+            productURL = URL.init(string: urlPath)
+        }
+        UIApplication.shared.open(productURL, options: [:], completionHandler: nil)
     }
     
 

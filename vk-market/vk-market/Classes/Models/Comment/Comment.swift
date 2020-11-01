@@ -37,7 +37,7 @@ class Comment: Decodable {
 
     var id: Int
     var fromId: Int
-    var canEdit: Int
+//    var canEdit: Int
     var date: Int
     var text: String
 
@@ -51,7 +51,7 @@ class Comment: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(Int.self, forKey: .id)
         fromId = try container.decode(Int.self, forKey: .fromId)
-        canEdit = try container.decode(Int.self, forKey: .canEdit)
+//        canEdit = try container.decode(Int.self, forKey: .canEdit)
         date = try container.decode(Int.self, forKey: .date)
         text = try container.decode(String.self, forKey: .text)
     }

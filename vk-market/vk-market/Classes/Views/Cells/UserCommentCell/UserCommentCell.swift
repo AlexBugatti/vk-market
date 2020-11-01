@@ -38,7 +38,7 @@ class UserCommentCell: UITableViewCell {
             self.usernameLabel.text = "\(profile.firstName) \(profile.lastName)"
         }
         self.commentLabel.text = comment.text
-        self.dateLabel.text = Date(timeIntervalSince1970: TimeInterval(comment.date)).format(string: "hh:mm")
+        self.dateLabel.text = Date(timeIntervalSince1970: TimeInterval(comment.date)).format(string: "dd MMM в hh:mm")
     }
     
 }

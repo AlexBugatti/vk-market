@@ -29,6 +29,8 @@ class Product: Decodable, Productable {
     
     var photos: [Photo]?
     var likes: Like?
+    var url: String?
+    var buttonTitle: String?
     
     var priceString: String {
         return self.price.text
@@ -38,7 +40,7 @@ class Product: Decodable, Productable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case id, ownerId = "owner_id", title, description, price, category, date, thumbPhoto = "thumb_photo", availability, photos, likes, isFavorite = "is_favorite"
+        case id, ownerId = "owner_id", title, description, price, category, date, thumbPhoto = "thumb_photo", availability, photos, likes, isFavorite = "is_favorite", url, buttonTitle = "button_title"
     }
     
     required init(from decoder: Decoder) throws {
@@ -54,6 +56,8 @@ class Product: Decodable, Productable {
         availability = try container.decode(Int.self, forKey: .availability)
         isFavorite = try container.decode(Bool.self, forKey: .isFavorite)
         
+        url = try? container.decode(String.self, forKey: .url)
+        buttonTitle = try? container.decode(String.self, forKey: .buttonTitle)
         photos = try? container.decode([Photo].self, forKey: .photos)
         likes = try? container.decode(Like.self, forKey: .likes)
     }

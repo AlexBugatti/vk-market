@@ -16,8 +16,9 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailProductController" customModule="vk_market" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailProductController" customModule="VK_Market" customModuleProvider="target">
             <connections>
+                <outlet property="actionButton" destination="0IW-7t-bVo" id="MIm-zh-S2W"/>
                 <outlet property="commentView" destination="LZ7-1v-nOM" id="23H-UN-86X"/>
                 <outlet property="descriptionLabel" destination="aW8-11-kQC" id="PIT-HV-RXd"/>
                 <outlet property="descriptionView" destination="iOP-jj-cCc" id="ny1-Em-IWD"/>
@@ -41,7 +42,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="sED-5N-bic">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="840"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqN-WS-SGO" customClass="PhotoSlider" customModule="vk_market" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqN-WS-SGO" customClass="PhotoSlider" customModule="VK_Market" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
@@ -111,7 +112,7 @@
                                         <constraint firstItem="V9E-42-VkJ" firstAttribute="top" secondItem="0hX-Xe-0lH" secondAttribute="top" constant="24" id="ofu-1v-Uwn"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZ7-1v-nOM" customClass="CommentView" customModule="vk_market" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZ7-1v-nOM" customClass="CommentView" customModule="VK_Market" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="662" width="414" height="50"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
@@ -152,12 +153,15 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5h-yp-bkn">
                     <rect key="frame" x="0.0" y="794" width="414" height="102"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-7t-bVo" customClass="MainButton" customModule="vk_market" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-7t-bVo" customClass="MainButton" customModule="VK_Market" customModuleProvider="target">
                             <rect key="frame" x="12" y="12" width="390" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="nF7-mT-xfz"/>
                             </constraints>
                             <state key="normal" title="Просмотреть товар"/>
+                            <connections>
+                                <action selector="onDidActionTapped:" destination="-1" eventType="touchUpInside" id="vm5-KQ-suI"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

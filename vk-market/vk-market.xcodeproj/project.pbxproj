@@ -130,7 +130,7 @@
 		FA7ACEE62548D7A2004F1214 /* GroupsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupsController.xib; sourceTree = "<group>"; };
 		FA7ACEEA2548D8F5004F1214 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		FA7ACEEC2548DA19004F1214 /* GroupResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupResponse.swift; sourceTree = "<group>"; };
-		FA8EF9D825473EDF002DD282 /* vk-market.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vk-market.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA8EF9D825473EDF002DD282 /* VK Market.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK Market.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8EF9DB25473EDF002DD282 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8EF9DF25473EDF002DD282 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA8EF9E225473EDF002DD282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -422,7 +422,7 @@
 		FA8EF9D925473EDF002DD282 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA8EF9D825473EDF002DD282 /* vk-market.app */,
+				FA8EF9D825473EDF002DD282 /* VK Market.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -647,7 +647,7 @@
 			);
 			name = "vk-market";
 			productName = "vk-market";
-			productReference = FA8EF9D825473EDF002DD282 /* vk-market.app */;
+			productReference = FA8EF9D825473EDF002DD282 /* VK Market.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -965,7 +965,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abugaev.vk-market";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "VK Market";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -984,7 +984,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abugaev.vk-market";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "VK Market";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
