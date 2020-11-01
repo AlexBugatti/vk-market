@@ -981,7 +981,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.majorauto.studio.staff;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexbugatti.vkmarket;
 				PRODUCT_NAME = "VK Market";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1001,7 +1001,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.majorauto.studio.staff;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexbugatti.vkmarket;
 				PRODUCT_NAME = "VK Market";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
