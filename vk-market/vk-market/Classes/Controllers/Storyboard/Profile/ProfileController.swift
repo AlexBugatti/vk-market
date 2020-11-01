@@ -75,9 +75,22 @@ class ProfileController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    private func logout() {
+        let alert = UIAlertController.init(title: nil, message: "Вы действительно хотите выйти?", preferredStyle: .alert)
+        let ok = UIAlertAction.init(title: "Ok", style: .default) { (action) in
+            VKManager.shared.logout()
+            self.tabBarController?.navigationController?.popToRootViewController(animated: true)
+        }
+        let cancel = UIAlertAction.init(title: "Отмена", style: .default, handler: nil)
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     // MARL: - Actions
     
     @IBAction func onDidLogoutTapped(_ sender: Any) {
+        logout()
     }
     
 

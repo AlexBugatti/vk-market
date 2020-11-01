@@ -61,4 +61,8 @@ class VKManager: NSObject, VKSdkUIDelegate, VKSdkDelegate {
         VKSdk.authorize(scope)
     }
     
+    func logout() {
+        VKSdk.forceLogout()
+    }
+    
 }
